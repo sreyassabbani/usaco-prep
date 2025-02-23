@@ -1,3 +1,6 @@
+// 2019 January Contest, Bronze
+// Problem 1. Shell Game
+
 #include <algorithm>
 #include <iostream>
 #include <vector>

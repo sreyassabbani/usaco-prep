@@ -1,4 +1,6 @@
-#include <vector>
+// 2018 December Contest, Bronze
+// Problem 1. Mixing Milk
+
 #include <cstdio>
 #include <iostream>
 using namespace std;
