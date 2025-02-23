@@ -1,3 +1,9 @@
+# Files for I/O
 **/*.in
 **/*.out
+
+# Binaries
 **/bin
+
+# Incomplete alternate implementations
+**/incomplete-alternate.cpp
