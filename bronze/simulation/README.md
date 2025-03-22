@@ -3,7 +3,7 @@
 - [x] [Cow Signal](cow-signal)
 - [ ] [Speeding Ticket](speeding-ticket)
 - [x] [Lost Cow](lost-cow)
-- [ ] [Bovine Shuffle](bovine-shuffle)
+- [x] [Bovine Shuffle](bovine-shuffle)
 - [ ] [Bucket List](bucket-list)
 - [ ] [Measuring Traffic](measuring-traffic)
 - [ ] [Circular Barn](circular-barn)
