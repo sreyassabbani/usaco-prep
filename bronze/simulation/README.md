@@ -1,0 +1,16 @@
+- [x] Shell Game
+- [x] Mixing Milk
+- [x] Cow Signal
+- [ ] (*) Speeding Ticket
+- [x] Lost Cow
+- [ ] Bovine Shuffle
+- [ ] Bucket List
+- [ ] Measuring Traffic
+- [ ] Circular Barn
+- [x] (*) Block Game
+- [x] Team Tic Tac Toe
+- [ ] Mowing the Field
+- [ ] Censoring
+- [ ] Milk Measurement
+- [ ] Stuck in a Rut
+
