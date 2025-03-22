@@ -1,16 +1,15 @@
-- [x] Shell Game
-- [x] Mixing Milk
-- [x] Cow Signal
-- [ ] (*) Speeding Ticket
-- [x] Lost Cow
-- [ ] Bovine Shuffle
-- [ ] Bucket List
-- [ ] Measuring Traffic
-- [ ] Circular Barn
-- [x] (*) Block Game
-- [x] Team Tic Tac Toe
-- [ ] Mowing the Field
-- [ ] Censoring
-- [ ] Milk Measurement
-- [ ] Stuck in a Rut
-
+- [x] [Shell Game](shell-game)
+- [x] [Mixing Milk](mixing-milk)
+- [x] [Cow Signal](cow-signal)
+- [ ] [Speeding Ticket](speeding-ticket)
+- [x] [Lost Cow](lost-cow)
+- [ ] [Bovine Shuffle](bovine-shuffle)
+- [ ] [Bucket List](bucket-list)
+- [ ] [Measuring Traffic](measuring-traffic)
+- [ ] [Circular Barn](circular-barn)
+- [x] [Block Game](block-game)
+- [x] [Team Tic Tac Toe](team-tic-tac-toe)
+- [ ] [Mowing the Field](mowing-the-field)
+- [ ] [Censoring](censoring)
+- [ ] [Milk Measurement](milk-measurement)
+- [ ] [Stuck in a Rut](stuck-in-a-rut)
