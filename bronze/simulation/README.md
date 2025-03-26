@@ -1,3 +1,4 @@
+### The Guide's Reclist
 - [x] [Shell Game](shell-game)
 - [x] [Mixing Milk](mixing-milk)
 - [x] [Cow Signal](cow-signal)
@@ -13,3 +14,6 @@
 - [ ] [Censoring](censoring)
 - [ ] [Milk Measurement](milk-measurement)
 - [ ] [Stuck in a Rut](stuck-in-a-rut)
+
+### Other
+- [x] [Hoof Paper Scissors Minus One](hpsmo)
