@@ -7,3 +7,6 @@
 
 # Incomplete alternate implementations
 **/incomplete-alternate.cpp
+
+# Tests, playgrounds
+**/test.cpp

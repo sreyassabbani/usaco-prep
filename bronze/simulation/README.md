@@ -12,7 +12,7 @@
 - [x] [Team Tic Tac Toe](team-tic-tac-toe)
 - [x] [Mowing the Field](mowing-the-field)
 - [ ] [Censoring](censoring)
-- [ ] [Milk Measurement](milk-measurement)
+- [x] [Milk Measurement](milk-measurement)
 - [ ] [Stuck in a Rut](stuck-in-a-rut)
 
 ### Other
