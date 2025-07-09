@@ -35,20 +35,26 @@ class BinaryTree {
 private:
     Node *root;
 
-    void _insert_helper(Node *node, int value) {
-        if (value > node->value) {
-            if (node->right == nullptr) {
-                node->right = new Node(value);
-            } else {
-                _insert_helper(node->right, value);
-            }
-        } else if (value < node->value) {
-            if (node->left == nullptr) {
-                node->left = new Node(value);
-            } else {
-                _insert_helper(node->left, value);
-            }
+    void _insert_helper(Node *&node, int value) {
+        if (node == nullptr) {
+            node = new Node(value);
+            return;
         }
+
+        Node *&next = value > node->value ? node->right : node->left;
+
+        _insert_helper(next, value);
+    }
+
+    bool _search_helper(Node *&node, int value) {
+        if (node == nullptr)
+            return false;
+        else if (node->value == value)
+            return true;
+
+        Node *&next = value > node->value ? node->right : node->left;
+
+        return _search_helper(next, value);
     }
 
 public:
@@ -57,22 +63,20 @@ public:
 
     void insert(int value) { _insert_helper(root, value); }
 
+    bool search(int value) { return _search_helper(root, value); }
+
     friend ostream &operator<<(ostream &os, const BinaryTree &tree) {
         if (tree.root != nullptr)
             recursive_bfs({tree.root});
 
-        vector<Node *> nodes_to_visit{tree.root->left, tree.root->right};
         return os;
     }
 };
 
 int main() {
-    BinaryTree tree = BinaryTree(2);
+    BinaryTree tree = BinaryTree(nullptr);
 
-    tree.insert(1);
-    tree.insert(4);
-    tree.insert(5);
-    tree.insert(3);
+    tree.insert(23);
 
     cout << tree;
 }
