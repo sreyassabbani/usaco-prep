@@ -10,7 +10,7 @@
 #include <vector>
 using namespace std;
 
-vector<string> build_path(map<string, vector<string>> &adj_list, string start) {
+vector<string> build_path(map<string, vector<string>>& adj_list, string start) {
     vector<string> path;
     unordered_set<string> visited;
     string current = start;
@@ -21,7 +21,7 @@ vector<string> build_path(map<string, vector<string>> &adj_list, string start) {
         visited.insert(current);
 
         next = "";
-        for (const string &neighbor : adj_list[current]) {
+        for (const string& neighbor : adj_list[current]) {
             if (visited.find(neighbor) == visited.end()) {
                 next = neighbor;
                 break;
@@ -33,11 +33,11 @@ vector<string> build_path(map<string, vector<string>> &adj_list, string start) {
     return path;
 }
 
-void recurse(vector<string> &neighbors, map<string, vector<string>> &adj_list,
-             string name, unordered_set<string> &already_classified) {
+void recurse(vector<string>& neighbors, map<string, vector<string>>& adj_list,
+             string name, unordered_set<string>& already_classified) {
     neighbors.push_back(name);
     already_classified.insert(name);
-    for (auto &neighbor_name : adj_list[name]) {
+    for (auto& neighbor_name : adj_list[name]) {
         if (already_classified.find(neighbor_name) ==
             already_classified.end()) {
             recurse(neighbors, adj_list, neighbor_name, already_classified);
@@ -66,7 +66,7 @@ int main() {
     unordered_set<string> already_classified;
     vector<vector<string>> groups;
 
-    for (auto &[name, al] : adj_list) {
+    for (auto& [name, al] : adj_list) {
         if (already_classified.find(name) != already_classified.end()) {
             continue;
         }
@@ -76,7 +76,7 @@ int main() {
 
         // find endpoints (nodes with degree <= 1)
         vector<string> endpoints;
-        for (const string &node : neighbors) {
+        for (const string& node : neighbors) {
             if (adj_list[node].size() <= 1) {
                 endpoints.push_back(node);
             }
@@ -99,8 +99,8 @@ int main() {
     sort(groups.begin(), groups.end());
 
     // final answer
-    for (auto &group : groups) {
-        for (auto &name : group) {
+    for (auto& group : groups) {
+        for (auto& name : group) {
             cout << name << "\n";
         }
     }

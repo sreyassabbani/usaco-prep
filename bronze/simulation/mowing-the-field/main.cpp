@@ -7,7 +7,7 @@
 #include <map>
 using namespace std;
 
-void move(pair<int, int> &pos, char dir) {
+void move(pair<int, int>& pos, char dir) {
     if (dir == 'N') {
         pos.second++;
     } else if (dir == 'S') {

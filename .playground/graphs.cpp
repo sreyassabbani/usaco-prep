@@ -15,7 +15,7 @@ public:
 
     int deg_of(int a) { return adj_list[a].size(); }
 
-    friend ostream &operator<<(ostream &os, const Graph &g) {
+    friend ostream& operator<<(ostream& os, const Graph& g) {
         for (int i = 0; i < g.num_vertices; i++) {
             os << i << ": ";
 

@@ -4,19 +4,19 @@ using namespace std;
 class Node {
 private:
     int value;
-    Node *right;
-    Node *left;
+    Node* right;
+    Node* left;
 
 public:
     Node(int value) : value(value), right(nullptr), left(nullptr) {}
 
     friend class BinaryTree;
 
-    friend void recursive_bfs(vector<Node *> nodes_to_visit);
+    friend void recursive_bfs(vector<Node*> nodes_to_visit);
 };
 
-void recursive_bfs(vector<Node *> nodes_to_visit) {
-    vector<Node *> next_layer_nodes_to_visit;
+void recursive_bfs(vector<Node*> nodes_to_visit) {
+    vector<Node*> next_layer_nodes_to_visit;
 
     for (auto node : nodes_to_visit) {
         if (node->left != nullptr)
@@ -33,39 +33,39 @@ void recursive_bfs(vector<Node *> nodes_to_visit) {
 
 class BinaryTree {
 private:
-    Node *root;
+    Node* root;
 
-    void _insert_helper(Node *&node, int value) {
+    void _insert_helper(Node*& node, int value) {
         if (node == nullptr) {
             node = new Node(value);
             return;
         }
 
-        Node *&next = value > node->value ? node->right : node->left;
+        Node*& next = value > node->value ? node->right : node->left;
 
         _insert_helper(next, value);
     }
 
-    bool _search_helper(Node *&node, int value) {
+    bool _search_helper(Node*& node, int value) {
         if (node == nullptr)
             return false;
         else if (node->value == value)
             return true;
 
-        Node *&next = value > node->value ? node->right : node->left;
+        Node*& next = value > node->value ? node->right : node->left;
 
         return _search_helper(next, value);
     }
 
 public:
-    BinaryTree(Node *root) : root(root) {}
+    BinaryTree(Node* root) : root(root) {}
     BinaryTree(int root_value) : root(new Node(root_value)) {}
 
     void insert(int value) { _insert_helper(root, value); }
 
     bool search(int value) { return _search_helper(root, value); }
 
-    friend ostream &operator<<(ostream &os, const BinaryTree &tree) {
+    friend ostream& operator<<(ostream& os, const BinaryTree& tree) {
         if (tree.root != nullptr)
             recursive_bfs({tree.root});
 
