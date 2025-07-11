@@ -25,6 +25,7 @@ This repo is really just for personal growth, but feel free to judge me for prem
 ```
 [level]
 ├── [category]
+│   ├── README.md
 │   ├── [problem]
 │   │   └── main.cpp
 │   └── x
@@ -36,6 +37,8 @@ This repo is really just for personal growth, but feel free to judge me for prem
 `[category]` — As outlined by the [USACO Guide](https://usaco.guide)
 
 `[problem]` — USACO problems (mostly those suggested by the guide)
+
+For every category, there is a `README.md` listing all the problems in the category I've attempted and wish to attempt soon. It's named that so that GitHub opens it automatically when you select a category folder.
 
 ### Playground
 ```
