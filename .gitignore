@@ -10,3 +10,6 @@
 
 # Tests, playgrounds
 **/test.cpp
+
+# Not tracked anyways, but this is so I can run `tree -a --gitignore`
+.git
