@@ -55,3 +55,13 @@ The playground is broken down into topics (e.g. `trees`, `graphs`), each of whic
 ## Version Tracking
 
 Okay, as the main reason for this repo anyway is to keep myself accountable, I have this weird urge to keep everything organized when I'm locked in. Doing so, I've adopted a spin-off of [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). I thought this would be nice and helpful. You can see some examples of this for yourself.
+
+I've recently modified the message template to:
+
+```
+level(year contest, category, P#): name
+```
+So for example:
+```
+bronze(2016 open, complete search, P1): diamond collector
+```

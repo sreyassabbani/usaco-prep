@@ -1,1 +1,2 @@
 - [x] [Milk Pails](milk-pails)
+- [x] [Diamond Collector](diamond-collector)
