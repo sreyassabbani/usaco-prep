@@ -1,2 +1,4 @@
 - [x] [Milk Pails](milk-pails)
 - [x] [Diamond Collector](diamond-collector)
+- [x] [Daisy Chains](daisy-chains)
+- [x] [Counting Liars](counting-liars)
