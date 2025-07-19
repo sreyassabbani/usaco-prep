@@ -20,15 +20,15 @@ int main() {
         cin >> back[i];
     }
 
-    int min_blocks[26]{0}; // min blocks of each letter in alphabet
+    int min_blocks[26] { 0 }; // min blocks of each letter in alphabet
 
     for (int i = 0; i < N; i++) {
-        int min_blocks_front[26]{0}; // min blocks of each letter in alphabet
+        int min_blocks_front[26] { 0 }; // min blocks of each letter in alphabet
         for (char ch : front[i]) {
             min_blocks_front[int(ch) - 97] += 1; // defaults 0
         }
 
-        int min_blocks_back[26]{0}; // min blocks of each letter in alphabet
+        int min_blocks_back[26] { 0 }; // min blocks of each letter in alphabet
         for (char ch : back[i]) {
             min_blocks_back[int(ch) - 97] += 1;
         }

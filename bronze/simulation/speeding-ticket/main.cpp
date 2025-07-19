@@ -20,8 +20,8 @@ int main() {
     cin >> N;
     cin >> M;
 
-    int limit[LEN] = {0};
-    int bessie[LEN] = {0};
+    int limit[LEN] = { 0 };
+    int bessie[LEN] = { 0 };
 
     // Initialize
     int cur_loc = 0;

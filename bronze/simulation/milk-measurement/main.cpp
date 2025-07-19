@@ -71,9 +71,7 @@ int main() {
         } else {
             current = "A";
         }
-        if (current != prev) {
-            updates++;
-        }
+        if (current != prev) { updates++; }
         prev = current;
     }
     cout << updates;

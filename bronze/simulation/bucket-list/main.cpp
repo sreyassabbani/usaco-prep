@@ -31,7 +31,7 @@ int main() {
         fin >> buckets;
 
         // would `emplace_back` have been a better choice?
-        cows.push_back({start, end, buckets});
+        cows.push_back({ start, end, buckets });
 
         // update min and max
         min_time = min(start, min_time);

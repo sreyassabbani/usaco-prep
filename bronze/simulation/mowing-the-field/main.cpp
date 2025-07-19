@@ -31,12 +31,12 @@ int main() {
     // so I'm using map here.
     map<pair<int, int>, int> grid;
 
-    pair<int, int> cur_pos{0, 0};
+    pair<int, int> cur_pos { 0, 0 };
     int t = 0;
 
     int x_max = INT_MAX;
 
-    grid.insert({cur_pos, 0});
+    grid.insert({ cur_pos, 0 });
 
     for (int i = 0; i < N; i++) {
         char dir;
@@ -56,8 +56,6 @@ int main() {
         }
     }
 
-    if (has_doubled)
-        cout << x_max;
-    else
-        cout << -1;
+    if (has_doubled) cout << x_max;
+    else cout << -1;
 }

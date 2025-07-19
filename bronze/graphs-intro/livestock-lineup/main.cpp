@@ -52,9 +52,16 @@ int main() {
     int N;
     cin >> N;
 
-    map<string, vector<string>> adj_list{
-        {"Bessie", {}}, {"Buttercup", {}}, {"Belinda", {}}, {"Beatrice", {}},
-        {"Bella", {}},  {"Blue", {}},      {"Betsy", {}},   {"Sue", {}}};
+    map<string, vector<string>> adj_list {
+        { "Bessie",    {} },
+        { "Buttercup", {} },
+        { "Belinda",   {} },
+        { "Beatrice",  {} },
+        { "Bella",     {} },
+        { "Blue",      {} },
+        { "Betsy",     {} },
+        { "Sue",       {} }
+    };
 
     for (int i = 0; i < N; i++) {
         string name_a, name_b, dump;
@@ -77,9 +84,7 @@ int main() {
         // find endpoints (nodes with degree <= 1)
         vector<string> endpoints;
         for (const string& node : neighbors) {
-            if (adj_list[node].size() <= 1) {
-                endpoints.push_back(node);
-            }
+            if (adj_list[node].size() <= 1) { endpoints.push_back(node); }
         }
 
         if (endpoints.size() >= 2) {

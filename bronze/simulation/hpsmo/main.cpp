@@ -28,8 +28,7 @@ int main() {
 
         // check which materials A loses to
         for (int j = 1; j <= N; ++j) {
-            if (j == A)
-                continue;
+            if (j == A) continue;
             int mx = max(j, A);
             int mn = min(j, A);
             int index = mx * (mx + 1) / 2 - (mx - mn) - 1;
@@ -41,8 +40,7 @@ int main() {
 
         // check which materials B loses to
         for (int j = 1; j <= N; ++j) {
-            if (j == B)
-                continue;
+            if (j == B) continue;
             int mx = max(j, B);
             int mn = min(j, B);
             int index = mx * (mx + 1) / 2 - (mx - mn) - 1;

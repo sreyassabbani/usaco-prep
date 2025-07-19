@@ -28,9 +28,7 @@ int main() {
         i++;
         total += change;
     }
-    if ((y - start) * (y - x) < 0) {
-        total -= abs(x - y);
-    }
+    if ((y - start) * (y - x) < 0) { total -= abs(x - y); }
 
     fout << total;
 }

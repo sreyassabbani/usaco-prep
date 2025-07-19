@@ -72,8 +72,7 @@ void recursive_dfs(Node& node) {
 void iterative_bfs(Node* node) {
     queue<Node*> qu;
 
-    if (node != nullptr)
-        qu.push(node);
+    if (node != nullptr) qu.push(node);
 
     Node* cur;
 
@@ -95,8 +94,7 @@ void iterative_bfs(Node* node) {
 void iterative_dfs(Node* node) {
     stack<Node*> st;
 
-    if (node != nullptr)
-        st.push(node);
+    if (node != nullptr) st.push(node);
 
     Node* cur;
 
@@ -123,8 +121,7 @@ public:
     explicit Tree(int root_value) : root(new Node(root_value)) {}
 
     friend ostream& operator<<(ostream& os, const Tree& tree) {
-        if (tree.root != nullptr)
-            recursive_bfs({tree.root.get()});
+        if (tree.root != nullptr) recursive_bfs({ tree.root.get() });
 
         return os;
     }

@@ -25,7 +25,7 @@ int main() {
         int pt;
         cin >> c >> pt;
 
-        stmt = {c, pt};
+        stmt = { c, pt };
 
         pts.push_back(pt);
         pts.push_back(pt - 1);
@@ -38,11 +38,9 @@ int main() {
         int cur_num_liers = 0;
         for (auto& [c, p] : all_stmts) {
             if (c == 'L') {
-                if (x > p)
-                    cur_num_liers++;
+                if (x > p) cur_num_liers++;
             } else /* c == 'G' */ {
-                if (x < p)
-                    cur_num_liers++;
+                if (x < p) cur_num_liers++;
             }
         }
         min_lying = min(min_lying, cur_num_liers);

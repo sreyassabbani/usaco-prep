@@ -12,7 +12,7 @@ int main() {
     freopen("shell.out", "w", stdout);
 
     // current state of shells
-    vector<int> state = {1, 2, 3};
+    vector<int> state = { 1, 2, 3 };
 
     // theoretical score if the pebble was under n-th shell (3 shells)
     // {0, 0, 0}

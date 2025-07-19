@@ -30,8 +30,7 @@ int main() {
         for (int j = i; j < N; ++j) {
             if (diamonds[j] - diamonds[i] <= K) {
                 ++cur_d;
-            } else
-                break;
+            } else break;
         }
         max_d = max(max_d, cur_d);
     }

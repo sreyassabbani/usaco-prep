@@ -47,10 +47,8 @@ private:
     }
 
     bool _search_helper(Node*& node, int value) {
-        if (node == nullptr)
-            return false;
-        else if (node->value == value)
-            return true;
+        if (node == nullptr) return false;
+        else if (node->value == value) return true;
 
         Node*& next = value > node->value ? node->right : node->left;
 
@@ -66,8 +64,7 @@ public:
     bool search(int value) { return _search_helper(root, value); }
 
     friend ostream& operator<<(ostream& os, const BinaryTree& tree) {
-        if (tree.root != nullptr)
-            recursive_bfs({tree.root});
+        if (tree.root != nullptr) recursive_bfs({ tree.root });
 
         return os;
     }

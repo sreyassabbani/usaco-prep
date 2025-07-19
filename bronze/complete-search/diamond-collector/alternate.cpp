@@ -40,8 +40,7 @@ int main() {
         int cur_d = 0; // cur display-able
 
         for (int& y : diamonds) {
-            if (y - x <= K && y >= x)
-                ++cur_d;
+            if (y - x <= K && y >= x) ++cur_d;
         }
         max_d = max(max_d, cur_d);
     }

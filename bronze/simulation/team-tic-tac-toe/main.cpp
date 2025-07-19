@@ -18,15 +18,11 @@ int main() {
     set<pair<char, char>> teams;
 
     auto add_team = [&](pair<char, char> team) mutable {
-        if (teams.find(team) == teams.end()) {
-            teams.insert(team);
-        }
+        if (teams.find(team) == teams.end()) { teams.insert(team); }
     };
 
     auto add_idvl = [&](char idvl) mutable {
-        if (idvls.find(idvl) == idvls.end()) {
-            idvls.insert(idvl);
-        }
+        if (idvls.find(idvl) == idvls.end()) { idvls.insert(idvl); }
     };
 
     // check vertically
@@ -35,10 +31,8 @@ int main() {
         for (int y = 0; y < 3; y++) {
             set.insert(board[x + 3 * y]);
         }
-        if (set.size() == 2)
-            add_team(pair(*set.begin(), *++set.begin()));
-        else if (set.size() == 1)
-            add_idvl(*set.begin());
+        if (set.size() == 2) add_team(pair(*set.begin(), *++set.begin()));
+        else if (set.size() == 1) add_idvl(*set.begin());
     }
 
     // check horizontally
@@ -47,10 +41,8 @@ int main() {
         for (int x = 0; x < 3; x++) {
             set.insert(board[x + 3 * y]);
         }
-        if (set.size() == 2)
-            add_team(pair(*set.begin(), *++set.begin()));
-        else if (set.size() == 1)
-            add_idvl(*set.begin());
+        if (set.size() == 2) add_team(pair(*set.begin(), *++set.begin()));
+        else if (set.size() == 1) add_idvl(*set.begin());
     }
 
     // check diagonally (decreasing diagonal)
@@ -60,8 +52,7 @@ int main() {
     }
     if (dec_diag.size() == 2)
         add_team(pair(*dec_diag.begin(), *++dec_diag.begin()));
-    else if (dec_diag.size() == 1)
-        add_idvl(*dec_diag.begin());
+    else if (dec_diag.size() == 1) add_idvl(*dec_diag.begin());
 
     // check diagonally (increasing diagonal)
     set<char> inc_diag;
@@ -70,8 +61,7 @@ int main() {
     }
     if (inc_diag.size() == 2)
         add_team(pair(*inc_diag.begin(), *++inc_diag.begin()));
-    else if (inc_diag.size() == 1)
-        add_idvl(*inc_diag.begin());
+    else if (inc_diag.size() == 1) add_idvl(*inc_diag.begin());
 
     cout << idvls.size() << "\n" << teams.size();
     return 0;

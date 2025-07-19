@@ -23,8 +23,7 @@ int main() {
     int prev = arr[0];
 
     for (int i = 1; i < N; i++) {
-        if (prev != arr[i])
-            ++num_distinct;
+        if (prev != arr[i]) ++num_distinct;
         prev = arr[i];
     }
 

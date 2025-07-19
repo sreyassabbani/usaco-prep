@@ -50,8 +50,7 @@ void recursive_bfs(vector<Node*> nodes_to_visit) {
         cout << node->value << " ";
 
         for (auto& child : node->children) {
-            if (child != nullptr)
-                next_layer_nodes_to_visit.push_back(child);
+            if (child != nullptr) next_layer_nodes_to_visit.push_back(child);
         }
     }
 
@@ -75,8 +74,7 @@ void recursive_dfs(Node& node) {
 void iterative_bfs(Node* node) {
     queue<Node*> qu;
 
-    if (node != nullptr)
-        qu.push(node);
+    if (node != nullptr) qu.push(node);
 
     Node* cur;
 
@@ -98,8 +96,7 @@ void iterative_bfs(Node* node) {
 void iterative_dfs(Node* node) {
     stack<Node*> st;
 
-    if (node != nullptr)
-        st.push(node);
+    if (node != nullptr) st.push(node);
 
     Node* cur;
 
@@ -125,8 +122,7 @@ public:
     Tree(int root_value) : root(new Node(root_value)) {}
 
     friend ostream& operator<<(ostream& os, const Tree& tree) {
-        if (tree.root != nullptr)
-            recursive_bfs({tree.root});
+        if (tree.root != nullptr) recursive_bfs({ tree.root });
 
         return os;
     }
