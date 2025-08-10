@@ -40,9 +40,7 @@ int main() {
     }
 
     int high = 0;
-    for (int i : assume) {
-        high = max(high, i);
-    }
+    for (int i : assume) high = max(high, i);
     cout << high;
 
     return 0;

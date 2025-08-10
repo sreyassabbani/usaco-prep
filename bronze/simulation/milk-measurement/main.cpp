@@ -7,9 +7,7 @@
 using namespace std;
 
 void update(int (&arr)[100], int from_day, int amount) {
-    for (int i = from_day; i < 100; ++i) {
-        arr[i] += amount;
-    }
+    for (int i = from_day; i < 100; ++i) arr[i] += amount;
 }
 
 int main() {

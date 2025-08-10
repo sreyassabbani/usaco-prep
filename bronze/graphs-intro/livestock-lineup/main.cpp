@@ -105,9 +105,7 @@ int main() {
 
     // final answer
     for (auto& group : groups) {
-        for (auto& name : group) {
-            cout << name << "\n";
-        }
+        for (auto& name : group) cout << name << "\n";
     }
 
     return 0;

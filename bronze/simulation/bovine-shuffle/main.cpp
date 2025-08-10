@@ -12,16 +12,13 @@ int main() {
     fin >> N;
 
     int a[N]; // shuffle pattern
-    for (int i = 0; i < N; ++i)
-        fin >> a[i];
+    for (int i = 0; i < N; ++i) fin >> a[i];
 
     int ids[N];
-    for (int i = 0; i < N; ++i)
-        fin >> ids[i];
+    for (int i = 0; i < N; ++i) fin >> ids[i];
 
     int cur[N]; // current ordering
-    for (int i = 0; i < N; ++i)
-        cur[i] = i + 1;
+    for (int i = 0; i < N; ++i) cur[i] = i + 1;
     int next[N]; // next ordering
 
     for (int i = 0; i < 3; ++i) { // "antishuffle" 3 times
@@ -35,9 +32,7 @@ int main() {
         copy(next, next + N, cur);
     }
 
-    for (int i = 0; i < N; ++i) {
-        fout << ids[cur[i] - 1] << "\n";
-    }
+    for (int i = 0; i < N; ++i) fout << ids[cur[i] - 1] << "\n";
 
     return 0;
 }

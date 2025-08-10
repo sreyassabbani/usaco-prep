@@ -29,16 +29,13 @@ int main() {
         }
 
         int min_blocks_back[26] { 0 }; // min blocks of each letter in alphabet
-        for (char ch : back[i]) {
-            min_blocks_back[int(ch) - 97] += 1;
-        }
+        for (char ch : back[i]) min_blocks_back[int(ch) - 97] += 1;
 
         for (int j = 0; j < 26; j++) {
             min_blocks[j] += max(min_blocks_back[j], min_blocks_front[j]);
         }
     }
-    for (int i = 0; i < 26; i++)
-        cout << min_blocks[i] << "\n";
+    for (int i = 0; i < 26; i++) cout << min_blocks[i] << "\n";
 
     return 0;
 }

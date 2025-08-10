@@ -13,15 +13,12 @@ int main() {
     int N;
     fin >> N;
     int circle[N];
-    for (int i = 0; i < N; ++i)
-        fin >> circle[i];
+    for (int i = 0; i < N; ++i) fin >> circle[i];
 
     int min_total = INT_MAX;
     for (int i = 0; i < N; ++i) {
         int total = 0;
-        for (int j = 0; j < N; ++j) {
-            total += j * circle[(j + i) % N];
-        }
+        for (int j = 0; j < N; ++j) total += j * circle[(j + i) % N];
         min_total = min(total, min_total);
     }
 

@@ -13,9 +13,7 @@ int main() {
 
     char signal[M * N];
     for (int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
-            fin >> signal[i + j * M];
-        }
+        for (int j = 0; j < N; j++) fin >> signal[i + j * M];
     }
 
     for (int i = 0; i < M * K; i++) {

@@ -17,9 +17,7 @@ public:
     Node(int value) : value(value), children({}) {}
 
     ~Node() {
-        for (Node* child : children) {
-            delete child;
-        }
+        for (Node* child : children) delete child;
     }
 
     void add_child(int value) { children.push_back(new Node(value)); }
@@ -64,9 +62,7 @@ void recursive_bfs(vector<Node*> nodes_to_visit) {
 // high stack usage
 void recursive_dfs(Node& node) {
     node.visit();
-    for (auto& child : node.children) {
-        recursive_dfs(*child);
-    }
+    for (auto& child : node.children) recursive_dfs(*child);
 }
 
 // iterative bfs overhead:
@@ -85,9 +81,7 @@ void iterative_bfs(Node* node) {
         cout << cur->value << " ";
 
         qu.pop();
-        for (auto& child : cur->children) {
-            qu.push(child);
-        }
+        for (auto& child : cur->children) qu.push(child);
     }
 }
 
@@ -107,9 +101,7 @@ void iterative_dfs(Node* node) {
         cout << cur->value << " ";
 
         st.pop();
-        for (auto& child : cur->children) {
-            st.push(child);
-        }
+        for (auto& child : cur->children) st.push(child);
     }
 }
 

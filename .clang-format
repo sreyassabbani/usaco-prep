@@ -6,5 +6,6 @@ Cpp11BracedListStyle: false
 SpaceBeforeCpp11BracedList: true
 AlignArrayOfStructures: Left
 AllowShortBlocksOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 

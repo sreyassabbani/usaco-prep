@@ -41,9 +41,7 @@ int main() {
 
     int min_amount = INT_MAX;
 
-    for (auto& [_, amount] : record) {
-        min_amount = min(amount, min_amount);
-    }
+    for (auto& [_, amount] : record) min_amount = min(amount, min_amount);
 
     int second_min_amount = INT_MAX;
     string cow_name;

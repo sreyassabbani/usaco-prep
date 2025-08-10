@@ -19,9 +19,7 @@ public:
         for (int i = 0; i < g.num_vertices; i++) {
             os << i << ": ";
 
-            for (int neighbor : g.adj_list[i]) {
-                os << neighbor << " ";
-            }
+            for (int neighbor : g.adj_list[i]) os << neighbor << " ";
 
             os << "\n";
         }
