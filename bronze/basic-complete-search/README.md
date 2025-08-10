@@ -3,3 +3,4 @@
 - [x] [Daisy Chains](daisy-chains)
 - [x] [Counting Liars](counting-liars)
 - [x] [Triangles](triangles)
+- [x] [Maximum Distance](maximum-distance)

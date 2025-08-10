@@ -19,8 +19,7 @@ int main() {
     fin >> N;
 
     vector<pair<int, int>> pts(N);
-    for (auto& pt : pts)
-        fin >> pt.first >> pt.second;
+    for (auto& pt : pts) fin >> pt.first >> pt.second;
 
     int max_area = 0;
 

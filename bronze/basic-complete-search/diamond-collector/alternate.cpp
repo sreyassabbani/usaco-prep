@@ -24,9 +24,7 @@ int main() {
     vector<int> diamonds(N);
 
     // faster way?
-    for (int& d : diamonds) {
-        fin >> d;
-    }
+    for (int& d : diamonds) fin >> d;
 
     // - for (int i = 0; i < N; ++i) {
     // -     fin >> diamonds[i];

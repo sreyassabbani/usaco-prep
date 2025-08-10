@@ -16,9 +16,7 @@ int main() {
 
     vector<int> diamonds(N);
 
-    for (int i = 0; i < N; ++i) {
-        fin >> diamonds[i];
-    }
+    for (int i = 0; i < N; ++i) fin >> diamonds[i];
 
     sort(diamonds.begin(), diamonds.end());
 

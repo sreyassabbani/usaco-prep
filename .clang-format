@@ -7,5 +7,7 @@ SpaceBeforeCpp11BracedList: true
 AlignArrayOfStructures: Left
 AllowShortBlocksOnASingleLine: true
 AllowShortLoopsOnASingleLine: true
+BraceWrapping:
+  AfterControlStatement: Never
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 

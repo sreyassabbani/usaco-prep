@@ -11,9 +11,7 @@ int main() {
 
     vector<int> flowers(N);
 
-    for (int& flower : flowers) {
-        cin >> flower;
-    }
+    for (int& flower : flowers) cin >> flower;
 
     int num_avg_fl = N; // every (i, i) range counts
 
@@ -26,9 +24,7 @@ int main() {
         for (int j = i + 1; j < N; ++j) { // skip (i, i) ranges
             int avg = 0;
 
-            for (int f = i; f <= j; f++) {
-                avg += flowers[f];
-            }
+            for (int f = i; f <= j; f++) avg += flowers[f];
 
             if (avg % (j - i + 1) != 0) // skip non-integer averages
                 continue;
