@@ -14,6 +14,7 @@
 - [ ] [Censoring](censoring)
 - [x] [Milk Measurement](milk-measurement)
 - [ ] [Stuck in a Rut](stuck-in-a-rut)
+- [ ] [Reflection](reflection)
 
 ### Other
 - [x] [Hoof Paper Scissors Minus One](hpsmo)
