@@ -6,20 +6,24 @@
   outputs = { self, nixpkgs, ... }:
   let
     system = "aarch64-darwin";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs { inherit system; };
+    llvm = pkgs.llvmPackages_21;
   in
   {
-    devShells.${system}.default = pkgs.mkShell {
-      buildInputs = with pkgs; [
-        clang
-        cmake
-      ];
+    devShells.${system}.default =
+      (pkgs.mkShell.override { stdenv = llvm.stdenv; }) {
+        packages = [
+          llvm.clang
+          llvm.clang-tools  # clangd, clang-format
+          llvm.lldb         # gives you lldb-dap too
+          pkgs.cmake
+        ];
 
-      shellHook = ''
-        if [ -t 1 ]; then
-          printf '%b\n' "\033[1;32m[FLAKE]\033[0m \033[0mNix dev shell activated\033[0m"
-        fi
-      '';
-    };
+        shellHook = ''
+          if [ -t 1 ]; then
+            printf '%b\n' "\033[1;32m[FLAKE]\033[0m Nix dev shell activated"
+          fi
+        '';
+      };
   };
 }
