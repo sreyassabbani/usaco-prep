@@ -1,0 +1,4 @@
+level(year contest, category, P#): name
+
+e.g.
+> bronze(2017 jan, greedy intro, P3): cow tipping

@@ -65,3 +65,5 @@ So for example:
 ```
 bronze(2016 open, complete search, P1): diamond collector
 ```
+
+Run `git config --local commit.template commit-template.txt`
