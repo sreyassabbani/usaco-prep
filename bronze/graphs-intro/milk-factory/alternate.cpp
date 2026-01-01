@@ -6,6 +6,9 @@
 // For N stations, there will always be N - 1 walkways. There will be one "sink"
 // node if and only if there is *at most* one node with an out-degree of 0.
 //
+// Note that disjoint cycles are not possible due to the same constraint on
+// edges.
+//
 // Consider the input:
 //
 // ```
