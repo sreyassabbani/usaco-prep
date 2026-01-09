@@ -67,3 +67,7 @@ bronze(2016 open, complete search, P1): diamond collector
 ```
 
 Run `git config --local commit.template commit-template.txt`
+
+## Thoughts on Language
+
+While this was initially all supposed to be written in C++, I gave up and couldn't resist the urge and power of sort by keys, easy functional programming, printing lists, etc.
